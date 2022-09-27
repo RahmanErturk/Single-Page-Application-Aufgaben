@@ -32,6 +32,7 @@ form {
 
 .pass-container {
   position: relative;
+  padding: 4px 0;
 }
 
 #password {
@@ -42,6 +43,11 @@ form {
 #pass-confirm {
   position: absolute;
   width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
 }
 
 .fa-eye {

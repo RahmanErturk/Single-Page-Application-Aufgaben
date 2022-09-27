@@ -14,33 +14,41 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector("form");
-        const password = document.querySelector("#password");
-        const passConfirm = document.querySelector("#pass-confirm");
         const birthday = document.querySelector("#birthday");
         const gtc = document.querySelector("#GTC");
         const data = document.getElementById("data");
+        const password = document.querySelector("#password");
+        const passConfirm = document.querySelector("#pass-confirm");
+        const passConfirmContainer =
+          document.querySelectorAll(".pass-container");
 
         form.addEventListener("submit", (event) => {
           event.preventDefault();
 
           if (password.value !== passConfirm.value) {
-            alert("Die Passwörter müssen übereinstimmen");
+            const passError = document.createElement("p");
+            passError.innerText = "Die Passwörter müssen übereinstimmen";
+            passError.classList.add("error");
+
+            passConfirmContainer[1].previousElementSibling.append(passError);
           }
 
-          const birthyearOfUser = birthday.value.substring(0, 4);
-          const date = new Date().getFullYear();
+          const birthdayOfUser = new Date(birthday.value);
+          const currentDate = Date.now(); // in Millisekunden
+          const age = currentDate - birthdayOfUser.getTime(); // in Millisekunden;
+          const timeSpan = 18 * 365 * 24 * 60 * 60 * 1000;
 
-          if (date - birthyearOfUser < 18) {
+          if (age < timeSpan) {
             alert(
               "Sie müssen gleich oder alter als 18 sein, um zu registrieren."
             );
-
-            if (gtc.checked === false) {
-              alert("Sie müssen zustimmen.");
-            }
           }
 
-          form.reset();
+          if (data.checked === false || gtc.checked === false) {
+            alert("Sie müssen zustimmen.");
+          }
+          // form.submit();
+          // form.reset();
         });
 
         const togglePassword = document.querySelector("#pass-icon");
@@ -88,9 +96,8 @@
             class="input-height input"
             required
           />
-          <i class="fa-regular fa-eye" id="pass-icon"></i><br />
+          <i class="fa-regular fa-eye" id="pass-icon"></i><br /><br /><br />
         </div>
-        <br /><br />
 
         <label for="pass-confirm">Passwort Wiederholen:</label>
         <div class="pass-container">
