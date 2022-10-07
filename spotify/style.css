@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 8px;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
