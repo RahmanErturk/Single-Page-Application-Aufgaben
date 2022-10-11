@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch from own server</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        async function getEmails() {
+          const response = await fetch("http://localhost:3000/emails");
+
+          if (response.status !== 200) {
+            throw new Error(response.status);
+          }
+
+          const emails = await response.json();
+
+          emails.forEach((email) => {
+            const userEmail = document.createElement("p");
+            userEmail.innerText = email.email;
+            avatarBtn.after(userEmail);
+          });
+
+          console.log(emails);
+        }
+        async function getAvatars() {
+          const response = await fetch("http://localhost:3000/avatars");
+
+          if (response.status !== 200) {
+            throw new Error(response.status);
+          }
+
+          const avatars = await response.json();
+
+          avatars.forEach((avatar) => {
+            const userAvatar = document.createElement("img");
+            userAvatar.style.display = "block";
+            userAvatar.src = avatar.avatar;
+            avatarBtn.after(userAvatar);
+          });
+
+          console.log(avatars);
+        }
+
+        const emailBtn = document.getElementById("user-emails");
+        const avatarBtn = document.getElementById("user-avatars");
+
+        emailBtn.addEventListener("click", getEmails);
+        avatarBtn.addEventListener("click", getAvatars);
+        // getEmails();
+        // getAvatars();
+      });
+    </script>
+  </head>
+  <body>
+    <button id="user-emails">Get Emails</button>
+    <button id="user-avatars">Get Avatars</button>
+  </body>
+</html>

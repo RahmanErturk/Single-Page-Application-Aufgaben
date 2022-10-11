@@ -1,0 +1,96 @@
+{
+  "emails": [
+    {
+      "id": 1,
+      "first_name": "Miof mela",
+      "email": "myerson0@php.net"
+    },
+    {
+      "id": 2,
+      "first_name": "Benoit",
+      "email": "btille1@mit.edu"
+    },
+    {
+      "id": 3,
+      "first_name": "Moses",
+      "email": "mhandford2@homestead.com"
+    },
+    {
+      "id": 4,
+      "first_name": "Maison",
+      "email": "mtessyman3@multiply.com"
+    },
+    {
+      "id": 5,
+      "first_name": "Natala",
+      "email": "nhails4@bing.com"
+    },
+    {
+      "id": 6,
+      "first_name": "Lucretia",
+      "email": "lbaugham5@gmpg.org"
+    },
+    {
+      "id": 7,
+      "first_name": "Cordy",
+      "email": "cdilks6@columbia.edu"
+    },
+    {
+      "id": 8,
+      "first_name": "Barby",
+      "email": "bhuggan7@chronoengine.com"
+    },
+    {
+      "id": 9,
+      "first_name": "Barbi",
+      "email": "blandes8@guardian.co.uk"
+    },
+    {
+      "id": 10,
+      "first_name": "Son",
+      "email": "sgaul9@xrea.com"
+    }
+  ],
+  "avatars": [
+    {
+      "id": 1,
+      "avatar": "https://robohash.org/nonmollitianatus.png?size=50x50&set=set1"
+    },
+    {
+      "id": 2,
+      "avatar": "https://robohash.org/totampossimusnatus.png?size=50x50&set=set1"
+    },
+    {
+      "id": 3,
+      "avatar": "https://robohash.org/sedaliquamet.png?size=50x50&set=set1"
+    },
+    {
+      "id": 4,
+      "avatar": "https://robohash.org/evenietvoluptateaut.png?size=50x50&set=set1"
+    },
+    {
+      "id": 5,
+      "avatar": "https://robohash.org/perferendistemporesequi.png?size=50x50&set=set1"
+    },
+    {
+      "id": 6,
+      "avatar": "https://robohash.org/cumqueillosimilique.png?size=50x50&set=set1"
+    },
+    {
+      "id": 7,
+      "avatar": "https://robohash.org/nihildoloremquevoluptas.png?size=50x50&set=set1"
+    },
+    {
+      "id": 8,
+      "avatar": "https://robohash.org/voluptasetquis.png?size=50x50&set=set1"
+    },
+    {
+      "id": 9,
+      "avatar": "https://robohash.org/etdoloreset.png?size=50x50&set=set1"
+    },
+    {
+      "id": 10,
+      "avatar": "https://robohash.org/doloresmodicum.png?size=50x50&set=set1"
+    }
+  ]
+}
