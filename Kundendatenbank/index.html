@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kundendatenbank</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Our Customers</h1>
+    <form name="myForm" action="http://localhost:3000/customers" method="POST">
+      <h2>Add Customer</h2>
+      <label for="first-name">
+        <input type="text" id="first-name" placeholder="First Name" />
+      </label>
+      <label for="last-name">
+        <input type="text" id="last-name" placeholder="Last Name" />
+      </label>
+      <label for="city">
+        <input type="text" id="city" placeholder="City" />
+      </label>
+      <label for="email">
+        <input type="email" id="email" placeholder="E-mail" />
+      </label>
+      <input type="submit" id="send-btn" value="Add Customer" />
+    </form>
+    <h2>Customer List</h2>
+    <div id="customers"></div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
