@@ -1,0 +1,12 @@
+.NavItem {
+  border: 1px solid red;
+  margin: 5px;
+  padding: 10px;
+  list-style: none;
+}
+
+.NavItem__Link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
