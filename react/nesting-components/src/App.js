@@ -3,7 +3,7 @@ import "./App.css";
 
 const listings = [
   {
-    name: "Kopfhörer",
+    name: "Beats Kopfhörer",
     price: 120,
     img: "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studio3-wireless/pdp/refresh2022/studio3-pdp-p02.png.large.2x.png",
     pickup: false,
@@ -17,7 +17,7 @@ const listings = [
     sold: true,
   },
   {
-    name: "Monitor",
+    name: "Samsung Monitor",
     price: 500,
     img: "https://images.samsung.com/is/image/samsung/p6pim/de/lu28r554uqrxzg/gallery/de-ur55-lu28r554uqrxzg-386426093?$650_519_PNG$",
     pickup: true,
