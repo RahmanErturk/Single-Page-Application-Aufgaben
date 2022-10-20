@@ -35,8 +35,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">Flowmarket</h1>
-      <p className="title">Your Market</p>
+      <div className="title-Container">
+        <h1 className="title">Flowmarket</h1>
+        <p className="title">Your Market</p>
+      </div>
       <div className="listings-container">{listingsComponents}</div>
     </div>
   );
