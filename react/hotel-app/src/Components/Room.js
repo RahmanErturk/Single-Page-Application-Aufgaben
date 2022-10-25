@@ -1,9 +1,12 @@
 import RoomDatas from "./rooms.json";
+import Button from "./Button";
 import "./Room.css";
 
 RoomDatas.sort((a, b) => +a.roomNo - +b.roomNo);
 
 const roomInfos = RoomDatas.map((room, i) => {
+  room.checkedIn = false;
+
   function checkDate(date) {
     const checkDateInfo = room[date];
     const [year, month, day] = checkDateInfo.split("-");
@@ -22,7 +25,9 @@ const roomInfos = RoomDatas.map((room, i) => {
       </p>
       <p className="Room__CheckIn">Check-In Date: {checkDate("checkIn")}</p>
       <p className="Room__CheckOut">Check-Out Date: {checkDate("checkOut")}</p>
+      {/* <p className="Room__CheckOut">Checkedin: {`${room.checkedIn}`}</p> */}
       <br />
+      <Button roomNo={room.roomNo} checkState={room.checkedIn} />
     </div>
   );
 });

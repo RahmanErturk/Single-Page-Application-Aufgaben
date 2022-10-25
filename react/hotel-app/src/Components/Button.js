@@ -1,0 +1,23 @@
+import { useState, useEffect } from "react";
+
+function Button({ roomNo, checkState }) {
+  const [checkedIn, setCheckedIn] = useState(checkState);
+
+  const checkBtnHandler = (event) => {
+    console.log(checkState);
+    setCheckedIn(!checkedIn);
+    checkState = checkedIn;
+    console.log(checkState);
+    console.log(checkedIn);
+  };
+
+  useEffect(() => {
+    if (checkedIn) {
+      alert(`Zimmer Nr. ${roomNo} ist nun belegt.`);
+    }
+  }, [checkedIn]);
+
+  return <button onClick={checkBtnHandler}>Check In</button>;
+}
+
+export default Button;

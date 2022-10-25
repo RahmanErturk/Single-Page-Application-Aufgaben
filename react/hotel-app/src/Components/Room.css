@@ -12,7 +12,7 @@
 .Room {
   margin: 5px;
   padding: 10px;
-  background-color: bisque;
+  background-color: rgb(226, 179, 179);
   border-radius: 8px;
   border: 1px solid black;
 }
