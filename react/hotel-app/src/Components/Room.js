@@ -1,12 +1,11 @@
 import RoomDatas from "./rooms.json";
 import Button from "./Button";
 import "./Room.css";
+import { useState, useEffect } from "react";
 
 RoomDatas.sort((a, b) => +a.roomNo - +b.roomNo);
 
 const roomInfos = RoomDatas.map((room, i) => {
-  room.checkedIn = false;
-
   function checkDate(date) {
     const checkDateInfo = room[date];
     const [year, month, day] = checkDateInfo.split("-");
@@ -32,9 +31,10 @@ const roomInfos = RoomDatas.map((room, i) => {
   );
 });
 function Room() {
+  const [state, setState] = useState("");
+
   return (
     <main>
-      <h1 className="title">Rooms</h1>
       <div className="mainContainer">{roomInfos}</div>
     </main>
   );

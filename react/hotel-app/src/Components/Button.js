@@ -4,10 +4,8 @@ function Button({ roomNo, checkState }) {
   const [checkedIn, setCheckedIn] = useState(checkState);
 
   const checkBtnHandler = (event) => {
-    console.log(checkState);
     setCheckedIn(!checkedIn);
-    checkState = checkedIn;
-    console.log(checkState);
+
     console.log(checkedIn);
   };
 
