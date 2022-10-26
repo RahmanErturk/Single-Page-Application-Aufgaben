@@ -1,0 +1,15 @@
+$fontColor: orange;
+
+.food-container {
+  width: 200px;
+}
+
+.food-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.higlighted-headline {
+  color: $fontColor;
+}
