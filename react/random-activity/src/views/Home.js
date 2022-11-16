@@ -16,7 +16,7 @@ export default function Home() {
         style={{ color: "white", textDecoration: "none" }}
         to={`/activity/${activity.key}`}
       >
-        <Button variant="primary" onClick={fetchData}>
+        <Button className="main-btn" variant="primary" onClick={fetchData}>
           Get Random Activity
         </Button>
       </Link>

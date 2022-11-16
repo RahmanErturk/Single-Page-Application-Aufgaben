@@ -29,9 +29,34 @@ export default function Header() {
       const result = await response.json();
 
       setActivity(result);
-      setSearchValue("");
     } catch (error) {
       console.warn("Error fetching data");
+    }
+  };
+
+  const activityType = [
+    "education",
+    "recreational",
+    "social",
+    "diy",
+    "charity",
+    "cooking",
+    "relaxation",
+    "music",
+    "busywork",
+  ];
+
+  const filterActivity = activityType.filter((el) => el === searchValue);
+
+  const linkFunc = () => {
+    if (filterActivity.length > 0) {
+      return `/activity/${activity.key}`;
+    } else if (searchValue === "") {
+      if (window.location.pathname === "/") {
+        return "/";
+      } else `/activity/${activity.key}`;
+    } else {
+      return "/type-error";
     }
   };
 
@@ -55,7 +80,12 @@ export default function Header() {
           />
           <Link
             style={{ color: "unset", textDecoration: "none" }}
-            to={searchValue !== "" ? `/activity/${activity.key}` : ""}
+            to={
+              // filterActivity.length > 0
+              //   ? `/activity/${activity.key}`
+              //   : "/type-error"
+              linkFunc()
+            }
           >
             <Button
               variant="outline-success"
